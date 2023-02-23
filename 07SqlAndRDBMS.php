@@ -14,11 +14,37 @@
     <?php require  "./includes/Navbar.php"; ?>
 
 
-<!--  -->
-
-
     <div class="container mt-3">
         <h2>SQL & RDBMS in PHP</h2>
+
+        <!-- by using phpMyAdmin Create a DataBase in Mysql with the name of Deepak and also added two records in it (Employee-1 and Employee-2) -->
+
+        <!-- Ways to connect MYSQL database with PHP -->
+        <!-- 1. MySQlI extension {Procedural way (function) <|||> Object orianted(Classes & Objects)} -->
+        <!-- 2. PDO (PHP Data Object) -->
+
+
+        <?php
+        // <!-- Connecting to the DataBase -->
+        $servername = "localhost";
+        $username = "root";
+        $password = "d";
+
+        // Create an Connection
+        $conn = mysqli_connect($servername, $username, $password);
+        // echo var_dump($conn);
+
+        // Die the connection if connection is not successfull
+        if($conn){
+            echo "Connection was successfull";
+        }else{
+            // NOTE:- die function will stop the execution same like return in javascript
+            die("Sorry We Failed to Connect :". mysqli_connect_error()) ."<br>";
+            echo "Connection was unsuccessfull",mysqli_connect_error(); ;
+        }
+
+        // echo "<br>  After Die Function Call"
+        ?>
 
         <!-- form started -->
         <!-- <form action="06GetAndPost.php" method="post">

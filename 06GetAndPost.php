@@ -13,8 +13,11 @@
     <!-- Navbar started -->
     <?php require  "./includes/Navbar.php"; ?>
 
+
+    <!-- here creating a Form and learn how to get data from user -->
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
+        //$_SERVER is a globall variable of PHP using it to see that the form request is post or not if that is post it will store the input values in these variables like this
         $email = $_POST['email'];
         $password = $_POST['password'];
 
@@ -22,7 +25,7 @@
         <strong>Form successfuly submitted</strong> your email is ' .$email .' and password is '. $password . '
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
-        // submit there to a database
+        // submit there to a database (before that need to learn how to creae a database and connect it with PHP)
     }
 
 
