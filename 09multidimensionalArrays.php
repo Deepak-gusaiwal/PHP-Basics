@@ -21,6 +21,11 @@
         ]
     ];
 
+    $arr = [
+        "name"=>"john doe"
+    ];
+    echo $arr['name'] ."<br>";
+
     foreach ($data as $innerArray) {
         foreach ($innerArray as $key => $value) {
             echo "$key : $value" . "<br>";
