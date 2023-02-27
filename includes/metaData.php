@@ -4,9 +4,7 @@
 <title><?php echo $websiteTitle; ?></title>
 <meta name="keywords" content="<?php echo "$keywords"; ?>">
 <meta name="description" content="<?php echo "$description"; ?>">
-<?php
-$currentPageUrl = 'http://' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-?>
+
 <link rel="canonical" href="<?php echo $currentPageUrl; ?>" />
 
 <!-- name meta data  -->
